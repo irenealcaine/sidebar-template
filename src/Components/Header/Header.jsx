@@ -9,34 +9,41 @@ import { DarkModeContext } from "../../Context/darkModeContext";
 
 const Header = () => {
   const location = useLocation();
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const menuActiveClass = isMenuOpen ? "active" : "";
+  const [isMenuClosed, setIsMenuClosed] = useState(false);
+  const menuActiveClass = isMenuClosed ? "closed" : "";
   const { darkMode } = useContext(DarkModeContext);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuClosed(!isMenuClosed);
   };
 
   return (
-    <nav className={`header ${darkMode ? "dark" : ""}`}>
-      <Link to={"/"} onClick={() => setIsMenuOpen(false)} className="logo-link">
+    <nav className={`header ${darkMode ? "dark" : ""} ${menuActiveClass}`}>
+      <Link
+        to={"/"}
+        onClick={() => setIsMenuClosed(true)}
+        className="logo-link"
+      >
         <img src={logo} alt={"Logo"} className="logo" />
       </Link>
 
       <div className={`menu-toggle ${menuActiveClass} `} onClick={toggleMenu}>
-        {isMenuOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
+        {isMenuClosed ? <AiOutlineMenu /> : <AiOutlineClose />}
       </div>
 
       <ul className={`navigation ${menuActiveClass} ${darkMode ? "dark" : ""}`}>
         {navbarItems.map((navbarItem) => (
-          <li key={navbarItem.slug} onClick={() => setIsMenuOpen(false)}>
+          <li key={navbarItem.slug} onClick={() => setIsMenuClosed(true)}>
             <Link
               to={`/${navbarItem.slug}`}
               className={`navigation-item ${
                 location.pathname === `/${navbarItem.slug}` && "active"
               }`}
             >
-              {navbarItem.name}
+              <AiOutlineClose />
+              <p className={`navigation-item-name ${menuActiveClass}`}>
+                {navbarItem.name}
+              </p>
             </Link>
           </li>
         ))}
