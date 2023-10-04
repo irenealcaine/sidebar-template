@@ -9,7 +9,7 @@ import { DarkModeContext } from "../../Context/darkModeContext";
 
 const Header = () => {
   const location = useLocation();
-  const [isMenuClosed, setIsMenuClosed] = useState(false);
+  const [isMenuClosed, setIsMenuClosed] = useState(true);
   const menuActiveClass = isMenuClosed ? "closed" : "";
   const { darkMode, dispatch } = useContext(DarkModeContext);
 
