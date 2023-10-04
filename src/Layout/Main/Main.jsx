@@ -11,7 +11,7 @@ const Main = ({ children }) => {
     <div className={`main ${darkMode ? "dark" : ""}`}>
       <Header />
       <div className="content">{children}</div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

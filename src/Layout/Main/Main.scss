@@ -4,9 +4,10 @@
   min-height: 100vh;
   background-color: $light;
   color: $dark;
-  position: relative;
+  display: flex;
+  // position: relative;
 
-  padding: 70px 0;
+  // padding: 70px 0;
 
   &.dark {
     background-color: $dark;
