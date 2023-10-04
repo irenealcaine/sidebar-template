@@ -1,7 +1,9 @@
+import "./Page4.scss";
+
 const Page4 = () => {
   return (
     <div className="page4">
-      <span>Page 4</span>
+      <h1>Page 4</h1>
     </div>
   );
 };

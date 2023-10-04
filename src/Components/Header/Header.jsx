@@ -4,7 +4,7 @@ import logo from "../../Assets/Images/logo.png";
 import { Link, useLocation } from "react-router-dom";
 import { navbarItems } from "../../Utils/Constants";
 import { useState } from "react";
-import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { BiSolidRightArrow } from "react-icons/bi";
 import { DarkModeContext } from "../../Context/darkModeContext";
 
 const Header = () => {
@@ -31,7 +31,7 @@ const Header = () => {
         className={`menu-toggle ${menuActiveClass} ${darkMode ? "dark" : ""}`}
         onClick={toggleMenu}
       >
-        {isMenuClosed ? <AiOutlineMenu /> : <AiOutlineClose />}
+        <BiSolidRightArrow />
       </div>
 
       <ul className={`navigation ${menuActiveClass} ${darkMode ? "dark" : ""}`}>
@@ -43,7 +43,7 @@ const Header = () => {
                 location.pathname === `/${navbarItem.slug}` && "active"
               }`}
             >
-              <AiOutlineClose />
+              <BiSolidRightArrow />
               <p className={`navigation-item-name ${menuActiveClass}`}>
                 {navbarItem.name}
               </p>
