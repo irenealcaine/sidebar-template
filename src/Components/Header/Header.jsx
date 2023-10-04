@@ -11,7 +11,7 @@ const Header = () => {
   const location = useLocation();
   const [isMenuClosed, setIsMenuClosed] = useState(false);
   const menuActiveClass = isMenuClosed ? "closed" : "";
-  const { darkMode } = useContext(DarkModeContext);
+  const { darkMode, dispatch } = useContext(DarkModeContext);
 
   const toggleMenu = () => {
     setIsMenuClosed(!isMenuClosed);
@@ -27,7 +27,10 @@ const Header = () => {
         <img src={logo} alt={"Logo"} className="logo" />
       </Link>
 
-      <div className={`menu-toggle ${menuActiveClass} `} onClick={toggleMenu}>
+      <div
+        className={`menu-toggle ${menuActiveClass} ${darkMode ? "dark" : ""}`}
+        onClick={toggleMenu}
+      >
         {isMenuClosed ? <AiOutlineMenu /> : <AiOutlineClose />}
       </div>
 
@@ -48,6 +51,27 @@ const Header = () => {
           </li>
         ))}
       </ul>
+
+      <div className={`color-options ${menuActiveClass}`}>
+        <div
+          className="color-option"
+          onClick={() => dispatch({ type: "LIGHT" })}
+        >
+          ⚪
+        </div>
+        <div
+          className="color-option"
+          onClick={() => dispatch({ type: "DARK" })}
+        >
+          ⚫
+        </div>
+        <div
+          className="color-option"
+          onClick={() => dispatch({ type: "TOGGLE" })}
+        >
+          {darkMode ? "☀️" : "🌙"}
+        </div>
+      </div>
     </nav>
   );
 };

@@ -74,40 +74,30 @@
     position: absolute;
     top: 50px;
     right: -15px;
-    background-color: $dark-blue;
-    border: 2px solid $blue;
+    background-color: $blue;
+    border: 2px solid $dark-blue;
     border-radius: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 5px;
+
+    &.dark {
+      background-color: $dark-blue;
+      border: 2px solid $blue;
+    }
+  }
+
+  .color-options {
+    display: flex;
+    &.closed {
+      flex-direction: column;
+    }
   }
 }
 
 @media screen and (max-width: 768px) {
   .header {
-    .navigation {
-      // display: none;
-
-      // &.open {
-      //   display: flex;
-      //   flex-direction: column;
-      //   padding: 20px 80px;
-      //   position: absolute;
-      //   top: calc($header-width + 5px);
-      //   right: 5px;
-      //   text-align: center;
-      //   z-index: 10;
-      //   background: $blue;
-      //   border: 2px solid $dark-blue;
-      //   border-radius: 15px;
-
-      //   &.dark {
-      //     background-color: $dark-blue;
-      //     border: 2px solid $blue;
-      //     // color: $dark;
-      //   }
-      // }
-    }
+    position: fixed;
   }
 }

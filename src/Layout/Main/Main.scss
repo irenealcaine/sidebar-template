@@ -5,9 +5,6 @@
   background-color: $light;
   color: $dark;
   display: flex;
-  // position: relative;
-
-  // padding: 70px 0;
 
   &.dark {
     background-color: $dark;
@@ -24,6 +21,7 @@
   .main {
     .content {
       width: 90%;
+      padding-left: $header-width-closed;
     }
   }
 }

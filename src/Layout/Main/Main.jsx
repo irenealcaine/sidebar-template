@@ -1,5 +1,4 @@
 import { useContext } from "react";
-import Footer from "../../Components/Footer/Footer";
 import Header from "../../Components/Header/Header";
 import "./Main.scss";
 import { DarkModeContext } from "../../Context/darkModeContext";
@@ -11,7 +10,6 @@ const Main = ({ children }) => {
     <div className={`main ${darkMode ? "dark" : ""}`}>
       <Header />
       <div className="content">{children}</div>
-      {/* <Footer /> */}
     </div>
   );
 };
