@@ -93,6 +93,9 @@
     &.closed {
       flex-direction: column;
     }
+    .color-option {
+      cursor: pointer;
+    }
   }
 }
 
