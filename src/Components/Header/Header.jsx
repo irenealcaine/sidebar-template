@@ -23,6 +23,10 @@ const Header = () => {
         <img src={logo} alt={"Logo"} className="logo" />
       </Link>
 
+      <div className={`menu-toggle ${menuActiveClass} `} onClick={toggleMenu}>
+        {isMenuOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
+      </div>
+
       <ul className={`navigation ${menuActiveClass} ${darkMode ? "dark" : ""}`}>
         {navbarItems.map((navbarItem) => (
           <li key={navbarItem.slug} onClick={() => setIsMenuOpen(false)}>
@@ -37,10 +41,6 @@ const Header = () => {
           </li>
         ))}
       </ul>
-
-      <div className={`menu-toggle ${menuActiveClass} `} onClick={toggleMenu}>
-        {isMenuOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
-      </div>
     </nav>
   );
 };
