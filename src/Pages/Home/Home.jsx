@@ -1,3 +1,4 @@
+import BlogCard from "../../Components/BlogCard/BlogCard";
 import Button from "../../Components/Button/Button";
 import Loader from "../../Components/Loader/Loader";
 import "./Home.scss";
@@ -39,6 +40,14 @@ const Home = () => {
       <Loader color={"green"} />
       <Loader color={"red"} />
       <Loader color={"purple"} />
+
+      <h2>Blog Card</h2>
+      <BlogCard
+        title="Mi Primer Post"
+        content="Este es el contenido de mi primer post en el blog."
+        author="Juan Pérez"
+        date="18 de Octubre, 2023"
+      />
     </div>
   );
 };
