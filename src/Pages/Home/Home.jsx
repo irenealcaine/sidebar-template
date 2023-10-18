@@ -7,12 +7,13 @@ const Home = () => {
   return (
     <div className="home">
       <h1>Home</h1>
+      <h2>Subtitle</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos
         placeat a explicabo?
       </p>
 
-      <h2>Paragraph</h2>
+      <h3>Paragraph</h3>
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos
         placeat a explicabo? Molestiae error, minus libero dolorem eveniet
@@ -23,13 +24,12 @@ const Home = () => {
       </p>
 
       <h2>Buttons</h2>
-      <h3>Default, green, red, purple, disabled</h3>
-      <Button value={"Hola"} href={"https://google.es"} />
-      <Button value={"Hola"} href={"https://google.es"} color={"green"} />
-      <Button value={"Hola"} href={"https://google.es"} color={"red"} />
-      <Button value={"Hola"} href={"https://google.es"} color={"purple"} />
+      <Button value={"Default"} href={"https://google.es"} />
+      <Button value={"Green"} href={"https://google.es"} color={"green"} />
+      <Button value={"Red"} href={"https://google.es"} color={"red"} />
+      <Button value={"Purple"} href={"https://google.es"} color={"purple"} />
       <Button
-        value={"Hola"}
+        value={"Disabled"}
         href={"https://google.es"}
         color={"purple"}
         disabled={true}

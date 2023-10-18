@@ -13,6 +13,7 @@
   height: 100vh;
   position: sticky;
   width: $header-width;
+  z-index: 100;
 
   left: 0;
   top: 0;
@@ -22,6 +23,7 @@
 
   &.closed {
     width: $header-width-closed;
+
     .logo-link {
       .logo {
         width: calc($header-width-closed - 5px);
@@ -36,6 +38,7 @@
 
   .logo-link {
     display: flex;
+
     .logo {
       width: calc($header-width / 2);
       transition: $transition;
@@ -96,9 +99,11 @@
 
   .color-options {
     display: flex;
+
     &.closed {
       flex-direction: column;
     }
+
     .color-option {
       cursor: pointer;
     }
