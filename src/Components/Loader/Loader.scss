@@ -7,9 +7,11 @@
   display: inline-block;
   position: relative;
   border: 3px solid;
-  border-color: $blue $blue transparent;
   box-sizing: border-box;
   animation: rotation 1s linear infinite;
+  margin: 5px;
+
+  border-color: $blue $blue transparent;
 
   &::after {
     content: "";
@@ -21,12 +23,34 @@
     bottom: 0;
     margin: auto;
     border: 3px solid;
-    border-color: transparent $dark-blue $dark-blue;
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    animation: rotationBack 0.5s linear infinite;
+    animation: rotationBack 0.4s linear infinite;
     transform-origin: center center;
+
+    border-color: transparent $dark-blue $dark-blue;
+  }
+
+  &.green {
+    border-color: $green $green transparent;
+    &::after {
+      border-color: transparent $dark-green $dark-green;
+    }
+  }
+
+  &.red {
+    border-color: $red $red transparent;
+    &::after {
+      border-color: transparent $dark-red $dark-red;
+    }
+  }
+
+  &.purple {
+    border-color: $purple $purple transparent;
+    &::after {
+      border-color: transparent $dark-purple $dark-purple;
+    }
   }
 }
 @keyframes rotation {

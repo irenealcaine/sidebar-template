@@ -1,7 +1,7 @@
-import "./Loader.scss"
+import "./Loader.scss";
 
-const Loader = () => {
-  return <span className="loader"></span>;
+const Loader = ({ color }) => {
+  return <span className={`loader ${color}`}></span>;
 };
 
 export default Loader;

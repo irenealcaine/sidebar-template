@@ -14,6 +14,7 @@ const Home = () => {
         porro numquam repellat cum delectus. Aliquid doloremque aperiam rem
         accusamus ut, veniam velit, amet dolore, at libero voluptatem iure?
       </p>
+
       <h2>Paragraph</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos
@@ -23,6 +24,7 @@ const Home = () => {
         porro numquam repellat cum delectus. Aliquid doloremque aperiam rem
         accusamus ut, veniam velit, amet dolore, at libero voluptatem iure?
       </p>
+
       <h2>Buttons</h2>
       <h3>Default, green, red, purple, disabled</h3>
       <Button value={"Hola"} href={"https://google.es"} />
@@ -31,9 +33,11 @@ const Home = () => {
       <Button value={"Hola"} href={"https://google.es"} color={"purple"} />
       <Button value={"Hola"} href={"https://google.es"} disabled={true} />
 
-      <h2>Loader</h2>
-
+      <h2>Loaders</h2>
       <Loader />
+      <Loader color={"green"} />
+      <Loader color={"red"} />
+      <Loader color={"purple"} />
     </div>
   );
 };
