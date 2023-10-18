@@ -1,7 +1,9 @@
 import BlogCard from "../../Components/BlogCard/BlogCard";
 import Button from "../../Components/Button/Button";
 import Loader from "../../Components/Loader/Loader";
+import { posts } from "../../Data/BlogPosts";
 import "./Home.scss";
+
 
 const Home = () => {
   return (
@@ -42,12 +44,18 @@ const Home = () => {
       <Loader color={"purple"} />
 
       <h2>Blog Card</h2>
-      <BlogCard
-        title="Introduction to JavaScript"
-        content="A beginner's guide to JavaScript programming"
-        author="John Doe"
-        date="2023-10-18"
-      />
+
+      {posts.slice(0, 1).map((post) => (
+        <BlogCard
+          key={post.id}
+          image={post.image}
+          title={post.title}
+          subtitle={post.subtitle}
+          content={post.content}
+          author={post.author}
+          date={post.date}
+        />
+      ))}
     </div>
   );
 };

@@ -5,20 +5,29 @@
   border: 2px solid $blue;
   box-shadow: 2px 2px 5px $dark-blue;
   border-radius: 5px;
-  padding: 5px 15px 10px 15px;
   margin: 5px;
   max-width: 300px;
+  overflow: hidden;
 
-  &__title {}
-
-  &__content {}
+  &__image {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+  }
 
   &__info {
-    margin-top: 16px;
-    font-size: 0.9rem;
+    padding: 0px 15px 10px 15px;
+  }
 
-    &__author {}
+  &__content {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
 
-    &__date {}
+  &__author {
+    margin-top: 20px;
+    font-size: 0.85em;
   }
 }

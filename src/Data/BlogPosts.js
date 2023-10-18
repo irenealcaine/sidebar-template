@@ -1,11 +1,11 @@
-const posts = [
+export const posts = [
   {
     id: 1,
     title: "Introduction to JavaScript",
     slug: "introduction-to-javascript",
     subtitle: "A beginner's guide to JavaScript programming",
-    image: "image1.jpg",
-    content: "JavaScript is a versatile and widely-used programming language...",
+    image: "https://www.dongee.com/tutoriales/content/images/2022/10/image-83.png",
+    content: "JavaScript is a versatile and widely-used programming language that plays a pivotal role in web development. Its ability to enhance the interactivity and functionality of websites has made it an indispensable tool for both front-end and back-end development.",
     categories: ["Programming", "Web Development"],
     author: "John Doe",
     date: "2023-10-18"
