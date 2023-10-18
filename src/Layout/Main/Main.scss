@@ -3,12 +3,22 @@
 .main {
   min-height: 100vh;
   background-color: $light;
-  color: $dark;
+  color: $gray;
   display: flex;
+  transition: $transition;
+
+  p {
+    color: $gray;
+    transition: $transition;
+  }
 
   &.dark {
     background-color: $dark;
     color: $light;
+
+    p {
+      color: $light-gray;
+    }
   }
 
   .content {
