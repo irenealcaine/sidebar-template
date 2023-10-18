@@ -43,10 +43,10 @@ const Home = () => {
 
       <h2>Blog Card</h2>
       <BlogCard
-        title="Mi Primer Post"
-        content="Este es el contenido de mi primer post en el blog."
-        author="Juan Pérez"
-        date="18 de Octubre, 2023"
+        title="Introduction to JavaScript"
+        content="A beginner's guide to JavaScript programming"
+        author="John Doe"
+        date="2023-10-18"
       />
     </div>
   );

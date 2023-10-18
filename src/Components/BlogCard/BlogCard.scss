@@ -1,31 +1,24 @@
+@import "src/Variables.scss";
+
 .blog-card {
-  background-color: #fff;
-  border: 2px solid #ccc;
+  background: linear-gradient(145deg, transparent 40%, $blue 120%);
+  border: 2px solid $blue;
+  box-shadow: 2px 2px 5px $dark-blue;
   border-radius: 5px;
   padding: 5px 15px 10px 15px;
   margin: 5px;
   max-width: 300px;
 
-  &__title {
-    font-size: 1.5rem;
-    margin-bottom: 8px;
-  }
+  &__title {}
 
-  &__content {
-    font-size: 1rem;
-    color: #333;
-  }
+  &__content {}
 
   &__info {
     margin-top: 16px;
     font-size: 0.9rem;
 
-    &__author {
-      color: #555;
-    }
+    &__author {}
 
-    &__date {
-      color: #555;
-    }
+    &__date {}
   }
 }
