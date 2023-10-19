@@ -3,12 +3,12 @@
 .main {
   min-height: 100vh;
   background-color: $light;
-  color: $gray;
+  color: $dark-gray;
   display: flex;
   transition: $transition;
 
   p {
-    color: $gray;
+    color: $dark-gray;
     transition: $transition;
   }
 

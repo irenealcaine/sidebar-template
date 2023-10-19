@@ -1,8 +1,8 @@
 @import "src/Variables.scss";
 
 .header {
-  background-color: $blue;
-  border-right: 2px solid $dark-blue;
+  background-color: $main;
+  border-right: 2px solid $dark-main;
 
   display: flex;
   flex-direction: column;
@@ -32,8 +32,8 @@
   }
 
   &.dark {
-    background-color: $dark-blue;
-    border-right: 2px solid $blue;
+    background-color: $dark-main;
+    border-right: 2px solid $main;
   }
 
   .logo-link {
@@ -77,8 +77,8 @@
     position: absolute;
     top: 50px;
     right: -15px;
-    background-color: $blue;
-    border: 2px solid $dark-blue;
+    background-color: $main;
+    border: 2px solid $dark-main;
     border-radius: 100px;
     display: flex;
     justify-content: center;
@@ -88,8 +88,8 @@
     transition: $transition;
 
     &.dark {
-      background-color: $dark-blue;
-      border: 2px solid $blue;
+      background-color: $dark-main;
+      border: 2px solid $main;
     }
 
     &.closed {

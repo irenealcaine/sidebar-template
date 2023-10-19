@@ -9,25 +9,25 @@
   font-size: 20px;
   margin: 5px;
 
-  background-color: $blue;
-  border: 2px solid $dark-blue;
-  color: $dark-blue;
+  background-color: $main;
+  border: 2px solid $dark-main;
+  color: $dark-main;
 
   &:hover {
-    background-color: $dark-blue;
-    border: 2px solid $blue;
-    color: $blue;
+    background-color: $dark-main;
+    border: 2px solid $main;
+    color: $main;
   }
 
   &.dark {
-    background-color: $dark-blue;
-    border: 2px solid $blue;
-    color: $blue;
+    background-color: $dark-main;
+    border: 2px solid $main;
+    color: $main;
 
     &:hover {
-      background-color: $blue;
-      border: 2px solid $dark-blue;
-      color: $dark-blue;
+      background-color: $main;
+      border: 2px solid $dark-main;
+      color: $dark-main;
     }
   }
 

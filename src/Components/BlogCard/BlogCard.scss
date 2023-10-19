@@ -1,9 +1,9 @@
 @import "src/Variables.scss";
 
 .blog-card {
-  background: linear-gradient(145deg, transparent 40%, $blue 120%);
-  border: 2px solid $blue;
-  box-shadow: 2px 2px 5px $dark-blue;
+  background: linear-gradient(145deg, transparent 40%, $main 120%);
+  border: 2px solid $main;
+  box-shadow: 2px 2px 5px $dark-main;
   border-radius: 5px;
   margin: 5px;
   max-width: 300px;
