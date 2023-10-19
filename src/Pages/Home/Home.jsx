@@ -1,7 +1,9 @@
 import BlogCard from "../../Components/BlogCard/BlogCard";
 import Button from "../../Components/Button/Button";
 import Loader from "../../Components/Loader/Loader";
+import ProductCard from "../../Components/ProductCard/ProductCard";
 import { posts } from "../../Data/BlogPosts";
+import { products } from "../../Data/Products";
 import "./Home.scss";
 
 
@@ -54,6 +56,18 @@ const Home = () => {
           content={post.content}
           author={post.author}
           date={post.date}
+        />
+      ))}
+
+      <h2>Product Card</h2>
+
+      {products.slice(0, 1).map((product) => (
+        <ProductCard
+          key={product.id}
+          image={product.image}
+          title={product.title}
+          price={product.price}
+          description={product.description}
         />
       ))}
     </div>
