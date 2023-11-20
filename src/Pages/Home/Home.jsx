@@ -6,7 +6,6 @@ import { posts } from "../../Data/BlogPosts";
 import { products } from "../../Data/Products";
 import "./Home.scss";
 
-
 const Home = () => {
   return (
     <div className="home">
@@ -29,9 +28,17 @@ const Home = () => {
 
       <h2>Buttons</h2>
       <Button value={"Default"} href={"https://google.es"} />
+      <Button
+        value={"Secondary"}
+        href={"https://google.es"}
+        color={"secondary"}
+      />
+      <br />
+      <Button value={"Blue"} href={"https://google.es"} color={"blue"} />
       <Button value={"Green"} href={"https://google.es"} color={"green"} />
       <Button value={"Red"} href={"https://google.es"} color={"red"} />
       <Button value={"Purple"} href={"https://google.es"} color={"purple"} />
+      <br />
       <Button
         value={"Disabled"}
         href={"https://google.es"}
