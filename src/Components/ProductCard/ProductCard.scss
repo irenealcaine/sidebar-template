@@ -1,6 +1,5 @@
 @import "src/Variables.scss";
 
-
 .product-card {
   background: linear-gradient(145deg, transparent 40%, $main 120%);
   border: 2px solid $main;
@@ -8,7 +7,8 @@
   border-radius: 5px;
   margin: 5px;
   max-width: 300px;
-  overflow: hidden;
+  // overflow: hidden;
+  position: relative;
 
   &__image {
     width: 100%;
@@ -16,9 +16,37 @@
     object-fit: cover;
   }
 
-  &__name {}
+  &__info {
+    padding: 0px 15px 10px 15px;
+  }
 
-  &__price {}
+  &__name {
+    background: transparent;
+  }
 
-  &__description {}
+  &__price {
+    font-weight: 700;
+    font-size: 30px;
+
+    &__main {
+      text-decoration: line-through;
+    }
+  }
+
+  &__description {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  &__onSale {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-weight: 700;
+    background-color: $main;
+    padding: 5px 20px;
+    border-radius: 5px;
+  }
 }
