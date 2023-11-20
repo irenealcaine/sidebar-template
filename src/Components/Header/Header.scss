@@ -120,10 +120,13 @@
   }
 
   .color-options {
+    margin-top: 50px;
     display: flex;
+    gap: 10px;
 
     &.closed {
       flex-direction: column;
+      gap: 2px;
     }
 
     .color-option {
