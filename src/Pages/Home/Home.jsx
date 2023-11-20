@@ -48,6 +48,7 @@ const Home = () => {
 
       <h2>Loaders</h2>
       <Loader />
+      <Loader color={"blue"} />
       <Loader color={"green"} />
       <Loader color={"red"} />
       <Loader color={"purple"} />

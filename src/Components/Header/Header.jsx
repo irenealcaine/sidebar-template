@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import "./Header.scss";
-import logo from "../../Assets/Images/logo.png";
+import logo from "../../Assets/Images/logo.jpg";
 import { Link, useLocation } from "react-router-dom";
 import { navbarItems } from "../../Utils/Constants";
 import { useState } from "react";
@@ -24,7 +24,11 @@ const Header = () => {
         onClick={() => setIsMenuClosed(true)}
         className="logo-link"
       >
-        <img src={logo} alt={"Logo"} className="logo" />
+        <img
+          src={logo}
+          alt={"Logo"}
+          className={`logo ${darkMode ? "dark" : ""}`}
+        />
       </Link>
 
       <div
@@ -39,14 +43,14 @@ const Header = () => {
           <li key={navbarItem.slug} onClick={() => setIsMenuClosed(true)}>
             <Link
               to={`/${navbarItem.slug}`}
-              className={`navigation-item ${
+              className={`navigation-item  ${darkMode ? "dark" : ""} ${
                 location.pathname === `/${navbarItem.slug}` && "active"
               }`}
             >
-              <BiSolidRightArrow />
-              <p className={`navigation-item-name ${menuActiveClass}`}>
+              <span className={`navigation-item-name ${menuActiveClass}`}>
                 {navbarItem.name}
-              </p>
+              </span>
+              <span className={`navigation-item-icon`}>{navbarItem.icon}</span>
             </Link>
           </li>
         ))}
