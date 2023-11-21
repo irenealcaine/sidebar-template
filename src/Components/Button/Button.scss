@@ -8,6 +8,7 @@
   font-weight: 700;
   font-size: 18px;
   margin: 5px;
+  min-width: 100px;
 
   background: linear-gradient(145deg, $main, $dark-main);
   background-size: 100% 300%;
@@ -171,5 +172,12 @@
       border: 2px solid rgba(128, 128, 128, 0.5);
       color: rgba(128, 128, 128, 0.8);
     }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .button {
+    font-size: 14px;
+    padding: 5px 15px;
   }
 }
