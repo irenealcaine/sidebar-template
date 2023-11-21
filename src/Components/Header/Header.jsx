@@ -18,44 +18,49 @@ const Header = () => {
   };
 
   return (
-    <nav className={`header ${darkMode ? "dark" : ""} ${menuActiveClass}`}>
-      <Link
-        to={"/"}
-        onClick={() => setIsMenuClosed(true)}
-        className="logo-link"
-      >
-        <img
-          src={logo}
-          alt={"Logo"}
-          className={`logo ${darkMode ? "dark" : ""}`}
-        />
-      </Link>
+    <header className={`${darkMode ? "dark" : ""} ${menuActiveClass}`}>
+      <nav>
+        <Link
+          to={"/"}
+          onClick={() => setIsMenuClosed(true)}
+          className="logo-link"
+        >
+          <img
+            src={logo}
+            alt={"Logo"}
+            className={`logo ${darkMode ? "dark" : ""}`}
+          />
+        </Link>
 
-      <div
-        className={`menu-toggle ${menuActiveClass} ${darkMode ? "dark" : ""}`}
-        onClick={toggleMenu}
-      >
-        <BiSolidRightArrow />
-      </div>
+        <div
+          className={`menu-toggle ${menuActiveClass} ${darkMode ? "dark" : ""}`}
+          onClick={toggleMenu}
+        >
+          <BiSolidRightArrow />
+        </div>
 
-      <ul className={`navigation ${menuActiveClass} ${darkMode ? "dark" : ""}`}>
-        {navbarItems.map((navbarItem) => (
-          <li key={navbarItem.slug} onClick={() => setIsMenuClosed(true)}>
-            <Link
-              to={`/${navbarItem.slug}`}
-              className={`navigation-item  ${darkMode ? "dark" : ""} ${
-                location.pathname === `/${navbarItem.slug}` && "active"
-              }`}
-            >
-              <span className={`navigation-item-name ${menuActiveClass}`}>
-                {navbarItem.name}
-              </span>
-              <span className={`navigation-item-icon`}>{navbarItem.icon}</span>
-            </Link>
-          </li>
-        ))}
-      </ul>
-
+        <ul
+          className={`navigation ${menuActiveClass} ${darkMode ? "dark" : ""}`}
+        >
+          {navbarItems.map((navbarItem) => (
+            <li key={navbarItem.slug} onClick={() => setIsMenuClosed(true)}>
+              <Link
+                to={`/${navbarItem.slug}`}
+                className={`navigation-item  ${darkMode ? "dark" : ""} ${
+                  location.pathname === `/${navbarItem.slug}` && "active"
+                }`}
+              >
+                <span className={`navigation-item-name ${menuActiveClass}`}>
+                  {navbarItem.name}
+                </span>
+                <span className={`navigation-item-icon`}>
+                  {navbarItem.icon}
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
       <div className={`color-options ${menuActiveClass}`}>
         <div
           className="color-option"
@@ -76,7 +81,7 @@ const Header = () => {
           {darkMode ? "☀️" : "🌙"}
         </div>
       </div>
-    </nav>
+    </header>
   );
 };
 
