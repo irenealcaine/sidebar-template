@@ -1,8 +1,8 @@
-@import "src/Variables.scss";
+@import "../../Variables.css";
 
 header {
-  background: linear-gradient($main 70%, $dark-main);
-  border-right: 2px solid $dark-main;
+  background: linear-gradient(var(--main) 70%, var(--dark-main));
+  border-right: 2px solid var(--dark-main);
 
   display: flex;
   flex-direction: column;
@@ -12,7 +12,7 @@ header {
 
   height: 100vh;
   position: sticky;
-  width: $header-width;
+  width: var(--header-width);
   z-index: 100;
 
   left: 0;
@@ -20,7 +20,7 @@ header {
   padding: 10px;
   padding-bottom: 30px;
 
-  transition: $transition;
+  transition: var(--transition);
 
   .logo-link {
     display: flex;
@@ -28,33 +28,33 @@ header {
     align-items: center;
     .logo {
       border-radius: 100rem;
-      border: 2px solid $dark-main;
-      transition: $transition;
+      border: 2px solid var(--dark-main);
+      transition: var(--transition);
 
       &.dark {
-        border: 2px solid $main;
+        border: 2px solid var(--main);
       }
     }
   }
 
   &.closed {
-    width: $header-width-closed;
+    width: var(--header-width-closed);
 
     .logo-link {
       .logo {
-        width: calc($header-width-closed - 10px);
+        width: calc(var(--header-width-closed) - 10px);
       }
     }
   }
 
   &.dark {
-    background: linear-gradient($dark-main 70%, $main);
-    border-right: 2px solid $main;
+    background: linear-gradient(var(--dark-main) 70%, var(--main));
+    border-right: 2px solid var(--main);
   }
 
   .logo-link {
     .logo {
-      width: calc($header-width / 2);
+      width: calc(var(--header-width) / 2);
     }
   }
 
@@ -89,10 +89,10 @@ header {
 
       &.active {
         font-weight: 700;
-        color: $dark-main;
+        color: var(--dark-main);
 
         &.dark {
-          color: $main;
+          color: var(--main);
         }
       }
     }
@@ -103,19 +103,19 @@ header {
     position: absolute;
     top: 50px;
     right: -15px;
-    background-color: $main;
-    border: 2px solid $dark-main;
+    background-color: var(--main);
+    border: 2px solid var(--dark-main);
     border-radius: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 5px;
     transform: rotate(180deg);
-    transition: $transition;
+    transition: var(--transition);
 
     &.dark {
-      background-color: $dark-main;
-      border: 2px solid $main;
+      background-color: var(--dark-main);
+      border: 2px solid var(--main);
     }
 
     &.closed {
